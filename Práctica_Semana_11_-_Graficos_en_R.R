@@ -20,7 +20,7 @@
 # ------------------------------------------------------------------------------
 # Integrante A: Yeimy ALvarado Perez  Carne: C4C344  GitHub: Yeimy16
 # Integrante B: ______________________  Carne: __________  GitHub: ____________
-# Integrante C: ______________________  Carne: __________  GitHub: ____________
+# Integrante C: Sebastian Bonilla Elizondo Carne: C4D279 GitHub: Sebasbe222
 #               (deje en blanco si el grupo es de dos personas)
 #
 # ------------------------------------------------------------------------------
@@ -95,6 +95,8 @@ data("iris")
 data("ToothGrowth")
 
 # >>> ESCRIBA SU CODIGO AQUI: use str() y summary() sobre airquality y mtcars.
+ 
+
 str(airquality)
 summary(airquality)
 str(mtcars)
@@ -102,8 +104,10 @@ summary(mtcars)
 
 
 # 0.2  En un comentario, indiquen cuantas observaciones y cuantas variables
-#      tiene 'airquality' y mencionen si contiene valores faltantes (NA).
+# tiene 'airquality' y mencionen si contiene valores faltantes (NA).
 #
+# Respuesta 0.2: airquality posee 153 observaciones y 6 variables, este mismo si posee NA´s
+#mtcars tien 32 observaciones y 11 variables, en este caso, este mismo no tiene valores NA´s
 # Respuesta 0.2: Tiene 153 observaciones y 6 variables. Si tiene valores faltantes
 
 
@@ -153,9 +157,15 @@ barplot(airquality$Wind,
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+boxplot(Temp ~ Month, 
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
 
 
-# Comentario 1.3: ______________________________________________________________
+# Comentario 1.3: Se observa una mayor temperatura en el mes 8 correpondinete a 
+# agosto 
 
 
 
@@ -198,6 +208,34 @@ plot(airquality$Temp, airquality$Ozone,
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+
+par(mfrow = c(1, 2))
+
+###Graficos elegidos#
+hist(airquality$Temp,
+     main = "Histograma de Temperatura",
+     xlab = "Temperatura")
+
+# Grafico 2
+boxplot(Temp ~ Month,
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
+
+par(mfrow = c(1, 1))
+
+###Exportar PNG#
+
+png("temperatura_mes.png")
+
+boxplot(Temp ~ Month,
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
+
+dev.off()
 
 
 # ==============================================================================
@@ -255,7 +293,18 @@ ggplot(data = airquality, aes(x = Temp, y = Ozone)) +
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+library(ggplot2)
 
+ggplot(data = airquality,
+       aes(x = Temp, y = Ozone)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~ Month) +
+  labs(
+    title = "Relación entre temperatura y ozono por mes",
+    x = "Temperatura",
+    y = "Concentración de Ozono"
+  )
 
 # ------------------------------------------------------------------------------
 # Ejercicio 2.4  GRAFICO DE BARRAS CON ggplot2  (4 pts)  [Resp.: Integrante A]
@@ -299,7 +348,18 @@ library(maps)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+###Mapa del mundo###
+map("world",
+    fill = TRUE,
+    col = "lightgray",
+    main = "Mapa del mundo")
 
+###Mapa de un pais (Costa Rica)###
+map("world",
+    regions = "Costa Rica",
+    fill = TRUE,
+    col = "lightgreen",
+    main = "Costa Rica")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.2  MAPA POLIGONAL CON ggplot2  (5 pts)  [Resp.: Integrante A]
