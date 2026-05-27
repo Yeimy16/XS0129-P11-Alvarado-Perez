@@ -129,8 +129,6 @@ barplot(airquality$Wind,
         ylab = "Frecuencia", 
         col = "skyblue")
 
-
-
 # ------------------------------------------------------------------------------
 # Ejercicio 1.2  HISTOGRAMA  (4 pts)               [Responsable: Integrante B]
 # ------------------------------------------------------------------------------
