@@ -318,7 +318,6 @@ library(maps)
 #       geom_polygon(...) + coord_quickmap()
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
 region <- map_data("world", region = "Costa Rica")
 ggplot(region, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "forestgreen", color = "white") + 
@@ -328,8 +327,6 @@ ggplot(region, aes(x = long, y = lat, group = group)) +
     x = "Longitud",
     y = "Latitud"
   )
-
-
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.3  AGREGAR PUNTOS AL MAPA  (5 pts)   [Responsable: Integrante B]
