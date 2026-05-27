@@ -9,7 +9,7 @@ Este repositorio contiene el desarrollo de la Práctica de la Semana 11, realiza
 
 * Integrante A:  Yeimy Alvarado Pérez (Carné: C4C344) — GitHub: [@Yeimy16]
 * Integrante B:  Bianca Piedra  (Carné: ) — GitHub: [@BiancaPiedra]
-* Integrante C:  (Carné: ) — GitHub: [@Sebasbe222]
+* Integrante C:   Sebastian Bonilla Elizondo (Carné:  C4D279) — GitHub: [@Sebasbe222]
 
 ---
 
