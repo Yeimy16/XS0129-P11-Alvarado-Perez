@@ -173,8 +173,6 @@ plot(airquality$Temp, airquality$Ozone,
      xlab = "temperatura",
      ylab = "Concentracion de Ozono",
      phc = 19)
-
-
 # Comentario 1.4: Existe una asociación positiva ya que las temperaturas más altas están vinculadas  con un aumento en la concentración de ozono
 
 
