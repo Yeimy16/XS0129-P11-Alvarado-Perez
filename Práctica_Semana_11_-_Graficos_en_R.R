@@ -318,7 +318,18 @@ library(maps)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+###Mapa del mundo###
+map("world",
+    fill = TRUE,
+    col = "lightgray",
+    main = "Mapa del mundo")
 
+###Mapa de un pais (Costa Rica)###
+map("world",
+    regions = "Costa Rica",
+    fill = TRUE,
+    col = "lightgreen",
+    main = "Costa Rica")
 
 # ------------------------------------------------------------------------------
 # Ejercicio 3.2  MAPA POLIGONAL CON ggplot2  (5 pts)  [Resp.: Integrante A]
