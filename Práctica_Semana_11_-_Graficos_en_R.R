@@ -20,7 +20,7 @@
 # ------------------------------------------------------------------------------
 # Integrante A: ______________________  Carne: __________  GitHub: ____________
 # Integrante B: ______________________  Carne: __________  GitHub: ____________
-# Integrante C: ______________________  Carne: __________  GitHub: ____________
+# Integrante C: Sebastian Bonilla Elizondo Carne: C4D279 GitHub: Sebasbe222
 #               (deje en blanco si el grupo es de dos personas)
 #
 # ------------------------------------------------------------------------------
@@ -95,13 +95,15 @@ data("iris")
 data("ToothGrowth")
 
 # >>> ESCRIBA SU CODIGO AQUI: use str() y summary() sobre airquality y mtcars.
-
-
+ 
+str(airquality)
+str(mtcars)
 
 # 0.2  En un comentario, indiquen cuantas observaciones y cuantas variables
-#      tiene 'airquality' y mencionen si contiene valores faltantes (NA).
+# tiene 'airquality' y mencionen si contiene valores faltantes (NA).
 #
-# Respuesta 0.2: _______________________________________________________________
+# Respuesta 0.2: airquality posee 153 observaciones y 6 variables, este mismo si posee NA´s
+#mtcars tien 32 observaciones y 11 variables, en este caso, este mismo no tiene valores NA´s
 
 
 
