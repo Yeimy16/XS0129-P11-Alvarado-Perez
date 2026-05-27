@@ -18,7 +18,7 @@
 # ------------------------------------------------------------------------------
 # DATOS DEL GRUPO
 # ------------------------------------------------------------------------------
-# Integrante A: ______________________  Carne: __________  GitHub: ____________
+# Integrante A: Yeimy ALvarado Perez  Carne: C4C344  GitHub: Yeimy16
 # Integrante B: ______________________  Carne: __________  GitHub: ____________
 # Integrante C: ______________________  Carne: __________  GitHub: ____________
 #               (deje en blanco si el grupo es de dos personas)
@@ -95,13 +95,16 @@ data("iris")
 data("ToothGrowth")
 
 # >>> ESCRIBA SU CODIGO AQUI: use str() y summary() sobre airquality y mtcars.
-
+str(airquality)
+summary(airquality)
+str(mtcars)
+summary(mtcars)
 
 
 # 0.2  En un comentario, indiquen cuantas observaciones y cuantas variables
 #      tiene 'airquality' y mencionen si contiene valores faltantes (NA).
 #
-# Respuesta 0.2: _______________________________________________________________
+# Respuesta 0.2: Tiene 153 observaciones y 6 variables. Si tiene valores faltantes
 
 
 
@@ -121,6 +124,10 @@ data("ToothGrowth")
 # Asignele un titulo, una etiqueta de eje y un color de su eleccion.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+barplot(airquality$Wind,
+        main = "Frecuencias airquality", 
+        ylab = "Frecuencia", 
+        col = "skyblue")
 
 
 
@@ -161,10 +168,14 @@ data("ToothGrowth")
 # airquality$Ozone (eje Y). Use pch = 19 y describa la relacion observada.
 
 # >>> ESCRIBA SU CODIGO AQUI:
+plot(airquality$Temp, airquality$Ozone,
+     main = "Grafico dispersion",
+     xlab = "temperatura",
+     ylab = "Concentracion de Ozono",
+     phc = 19)
 
 
-
-# Comentario 1.4: ______________________________________________________________
+# Comentario 1.4: Existe una asociación positiva ya que las temperaturas más altas están vinculadas  con un aumento en la concentración de ozono
 
 
 
@@ -216,7 +227,13 @@ library(ggplot2)
 # ahora con ggplot2 y geom_point().
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+ggplot(data = airquality, aes(x = Temp, y = Ozone)) +
+  geom_point() +
+  labs(
+    title = "Grafico dispersion",
+    x = "temperatura",
+    y = "Concentracion de Ozono"
+  )
 
 
 # ------------------------------------------------------------------------------
