@@ -231,7 +231,6 @@ ggplot(data = airquality, aes(x = Temp, y = Ozone)) +
     y = "Concentracion de Ozono"
   )
 
-
 # ------------------------------------------------------------------------------
 # Ejercicio 2.2  MAPEO ESTETICO  (4 pts)           [Responsable: Integrante B]
 # ------------------------------------------------------------------------------
