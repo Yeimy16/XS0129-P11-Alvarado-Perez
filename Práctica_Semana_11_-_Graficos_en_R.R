@@ -200,6 +200,34 @@ boxplot(Temp ~ Month,
 # >>> ESCRIBA SU CODIGO AQUI:
 
 
+par(mfrow = c(1, 2))
+
+###Graficos elegidos#
+hist(airquality$Temp,
+     main = "Histograma de Temperatura",
+     xlab = "Temperatura")
+
+# Grafico 2
+boxplot(Temp ~ Month,
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
+
+par(mfrow = c(1, 1))
+
+###Exportar PNG#
+
+png("temperatura_mes.png")
+
+boxplot(Temp ~ Month,
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
+
+dev.off()
+
 
 # ==============================================================================
 # PARTE 2 - GRAFICOS CON ggplot2  (20 puntos)
