@@ -279,7 +279,18 @@ library(ggplot2)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+library(ggplot2)
 
+ggplot(data = airquality,
+       aes(x = Temp, y = Ozone)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~ Month) +
+  labs(
+    title = "Relación entre temperatura y ozono por mes",
+    x = "Temperatura",
+    y = "Concentración de Ozono"
+  )
 
 # ------------------------------------------------------------------------------
 # Ejercicio 2.4  GRAFICO DE BARRAS CON ggplot2  (4 pts)  [Resp.: Integrante A]
