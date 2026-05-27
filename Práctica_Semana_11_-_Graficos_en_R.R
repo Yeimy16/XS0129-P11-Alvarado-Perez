@@ -150,9 +150,15 @@ str(mtcars)
 
 # >>> ESCRIBA SU CODIGO AQUI:
 
+boxplot(Temp ~ Month, 
+        data = airquality,
+        main = "Temperatura por Mes",
+        xlab = "Mes",
+        ylab = "Temperatura")
 
 
-# Comentario 1.3: ______________________________________________________________
+# Comentario 1.3: Se observa una mayor temperatura en el mes 8 correpondinete a 
+# agosto 
 
 
 
