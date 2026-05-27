@@ -386,8 +386,10 @@ library(maps)
 # library(__________)
 
 # >>> ESCRIBA SU CODIGO AQUI:
+install.packages(ggthemes)
+library(ggthemes)
 
-
+ggplot(data = iris, aes(x = Species, y = Sepal.Length))
 
 # ------------------------------------------------------------------------------
 # 4.4  COMPARACION Y REFLEXION  (4 pts)            [Responsable: Integrante C]
