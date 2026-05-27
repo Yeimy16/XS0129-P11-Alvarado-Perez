@@ -272,7 +272,6 @@ ggplot(data = iris, aes(x = Species, y = Sepal.Length)) +
     y = "Promedio de Sepal.Length"
   )
 
-
 # ------------------------------------------------------------------------------
 # Ejercicio 2.5  PERSONALIZACION COMPLETA  (4 pts) [Responsable: Integrante B]
 # ------------------------------------------------------------------------------
