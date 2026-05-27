@@ -269,7 +269,13 @@ ggplot(data = airquality, aes(x = Temp, y = Ozone)) +
 # de Sepal.Length por especie (Species). Use stat = "summary", fun = "mean".
 
 # >>> ESCRIBA SU CODIGO AQUI:
-
+ggplot(data = iris, aes(x = Species, y = Sepal.Length)) +
+  geom_bar(stat = "summary", fun = "mean", fill = "skyblue", color = "black") +
+  labs(
+    title = "Promedio de Sepal.Length por Especie",
+    x = "Especie (Species)",
+    y = "Promedio de Sepal.Length"
+  )
 
 
 # ------------------------------------------------------------------------------
@@ -312,6 +318,16 @@ library(maps)
 #       geom_polygon(...) + coord_quickmap()
 
 # >>> ESCRIBA SU CODIGO AQUI:
+
+region <- map_data("world", region = "Costa Rica")
+ggplot(region, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "forestgreen", color = "white") + 
+  coord_quickmap() +
+  labs(
+    title = "Mapa de Costa Rica",
+    x = "Longitud",
+    y = "Latitud"
+  )
 
 
 
